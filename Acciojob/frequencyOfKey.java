@@ -5,20 +5,20 @@ import java.util.Scanner;
 public class frequencyOfKey {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-
-        int N = in.nextInt();
-        int[] arr = new int[N];
-        for(int i = 0; i < N; i++){
-            arr[i] = in.nextInt();
-        }
+        
+         int N = in.nextInt();
         int K = in.nextInt();
 
         int cout = 0;
+        int reversedNum = 0;
 
-        for(int i = 0; i < N; i++){
-            if(arr[i] == K) {
+        while (N > 0) {
+            int remainder = N % 10;
+             reversedNum = reversedNum * 10 + remainder;
+             if(remainder == K) {
                 cout++;
-            }
+             }
+            N /= 10;
         }
 
         if(cout>0){
@@ -27,5 +27,6 @@ public class frequencyOfKey {
             System.out.println(-1);
         }
 
+       
     }
 }
