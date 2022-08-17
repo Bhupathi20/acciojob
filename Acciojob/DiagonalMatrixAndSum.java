@@ -21,7 +21,7 @@ public class DiagonalMatrixAndSum {
             for (int j = 0; j < n; j++) {
  
                 // Condition for principal diagonal
-                if (i == j) {
+                if (i == j && arr[i][j] == 1) {
                     count++;
                 }
             }
@@ -37,7 +37,7 @@ public class DiagonalMatrixAndSum {
         if(count>n){
             System.out.println("YES");
         }else {
-            System.out.println("YES");
+            System.out.println("NO");
         }
 
 
